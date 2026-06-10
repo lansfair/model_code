@@ -1,0 +1,7 @@
+{
+  "setup-worktree": [
+    "pip install uv",
+    "uv sync --locked --extra all-no-flash",
+    "source .venv/bin/activate"
+  ]
+}

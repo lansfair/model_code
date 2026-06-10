@@ -1,0 +1,33 @@
+{
+  "layers": {
+    "naip": {
+      "band_sets": [
+        {
+          "bands": [
+            "R",
+            "G",
+            "B",
+            "IR"
+          ],
+          "dtype": "uint8"
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.planetary_computer.PlanetaryComputer",
+        "ingest": false,
+        "init_args": {
+          "asset_bands": {
+            "image": [
+              "R",
+              "G",
+              "B",
+              "IR"
+            ]
+          },
+          "collection_name": "naip"
+        }
+      },
+      "type": "raster"
+    }
+  }
+}

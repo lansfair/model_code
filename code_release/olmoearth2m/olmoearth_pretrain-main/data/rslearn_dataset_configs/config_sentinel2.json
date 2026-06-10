@@ -1,0 +1,641 @@
+{
+  "layers": {
+    "sentinel2_freq": {
+      "alias": "sentinel2",
+      "band_sets": [
+        {
+          "bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B08"
+          ],
+          "dtype": "uint16"
+        },
+        {
+          "bands": [
+            "B05",
+            "B06",
+            "B07",
+            "B8A",
+            "B11",
+            "B12"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -1
+        },
+        {
+          "bands": [
+            "B01",
+            "B09",
+            "B10"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -2
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.gcp_public_data.Sentinel2",
+        "init_args": {
+          "harmonize": true,
+          "index_cache_dir": "cache/sentinel2",
+          "modality": "L1C",
+          "sort_by": "cloud_cover",
+          "use_rtree_index": true
+        },
+        "query_config": {
+          "max_matches": 8,
+          "space_mode": "INTERSECTS"
+        }
+      },
+      "type": "raster"
+    },
+    "sentinel2_mo01": {
+      "alias": "sentinel2",
+      "band_sets": [
+        {
+          "bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B08"
+          ],
+          "dtype": "uint16"
+        },
+        {
+          "bands": [
+            "B05",
+            "B06",
+            "B07",
+            "B8A",
+            "B11",
+            "B12"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -1
+        },
+        {
+          "bands": [
+            "B01",
+            "B09",
+            "B10"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -2
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.gcp_public_data.Sentinel2",
+        "duration": "30d",
+        "init_args": {
+          "harmonize": true,
+          "index_cache_dir": "cache/sentinel2",
+          "modality": "L1C",
+          "sort_by": "cloud_cover",
+          "use_rtree_index": true
+        },
+        "time_offset": "-180d"
+      },
+      "type": "raster"
+    },
+    "sentinel2_mo02": {
+      "alias": "sentinel2",
+      "band_sets": [
+        {
+          "bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B08"
+          ],
+          "dtype": "uint16"
+        },
+        {
+          "bands": [
+            "B05",
+            "B06",
+            "B07",
+            "B8A",
+            "B11",
+            "B12"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -1
+        },
+        {
+          "bands": [
+            "B01",
+            "B09",
+            "B10"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -2
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.gcp_public_data.Sentinel2",
+        "duration": "30d",
+        "init_args": {
+          "harmonize": true,
+          "index_cache_dir": "cache/sentinel2",
+          "modality": "L1C",
+          "sort_by": "cloud_cover",
+          "use_rtree_index": true
+        },
+        "time_offset": "-150d"
+      },
+      "type": "raster"
+    },
+    "sentinel2_mo03": {
+      "alias": "sentinel2",
+      "band_sets": [
+        {
+          "bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B08"
+          ],
+          "dtype": "uint16"
+        },
+        {
+          "bands": [
+            "B05",
+            "B06",
+            "B07",
+            "B8A",
+            "B11",
+            "B12"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -1
+        },
+        {
+          "bands": [
+            "B01",
+            "B09",
+            "B10"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -2
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.gcp_public_data.Sentinel2",
+        "duration": "30d",
+        "init_args": {
+          "harmonize": true,
+          "index_cache_dir": "cache/sentinel2",
+          "modality": "L1C",
+          "sort_by": "cloud_cover",
+          "use_rtree_index": true
+        },
+        "time_offset": "-120d"
+      },
+      "type": "raster"
+    },
+    "sentinel2_mo04": {
+      "alias": "sentinel2",
+      "band_sets": [
+        {
+          "bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B08"
+          ],
+          "dtype": "uint16"
+        },
+        {
+          "bands": [
+            "B05",
+            "B06",
+            "B07",
+            "B8A",
+            "B11",
+            "B12"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -1
+        },
+        {
+          "bands": [
+            "B01",
+            "B09",
+            "B10"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -2
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.gcp_public_data.Sentinel2",
+        "duration": "30d",
+        "init_args": {
+          "harmonize": true,
+          "index_cache_dir": "cache/sentinel2",
+          "modality": "L1C",
+          "sort_by": "cloud_cover",
+          "use_rtree_index": true
+        },
+        "time_offset": "-90d"
+      },
+      "type": "raster"
+    },
+    "sentinel2_mo05": {
+      "alias": "sentinel2",
+      "band_sets": [
+        {
+          "bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B08"
+          ],
+          "dtype": "uint16"
+        },
+        {
+          "bands": [
+            "B05",
+            "B06",
+            "B07",
+            "B8A",
+            "B11",
+            "B12"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -1
+        },
+        {
+          "bands": [
+            "B01",
+            "B09",
+            "B10"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -2
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.gcp_public_data.Sentinel2",
+        "duration": "30d",
+        "init_args": {
+          "harmonize": true,
+          "index_cache_dir": "cache/sentinel2",
+          "modality": "L1C",
+          "sort_by": "cloud_cover",
+          "use_rtree_index": true
+        },
+        "time_offset": "-60d"
+      },
+      "type": "raster"
+    },
+    "sentinel2_mo06": {
+      "alias": "sentinel2",
+      "band_sets": [
+        {
+          "bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B08"
+          ],
+          "dtype": "uint16"
+        },
+        {
+          "bands": [
+            "B05",
+            "B06",
+            "B07",
+            "B8A",
+            "B11",
+            "B12"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -1
+        },
+        {
+          "bands": [
+            "B01",
+            "B09",
+            "B10"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -2
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.gcp_public_data.Sentinel2",
+        "duration": "30d",
+        "init_args": {
+          "harmonize": true,
+          "index_cache_dir": "cache/sentinel2",
+          "modality": "L1C",
+          "sort_by": "cloud_cover",
+          "use_rtree_index": true
+        },
+        "time_offset": "-30d"
+      },
+      "type": "raster"
+    },
+    "sentinel2_mo07": {
+      "alias": "sentinel2",
+      "band_sets": [
+        {
+          "bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B08"
+          ],
+          "dtype": "uint16"
+        },
+        {
+          "bands": [
+            "B05",
+            "B06",
+            "B07",
+            "B8A",
+            "B11",
+            "B12"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -1
+        },
+        {
+          "bands": [
+            "B01",
+            "B09",
+            "B10"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -2
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.gcp_public_data.Sentinel2",
+        "duration": "30d",
+        "init_args": {
+          "harmonize": true,
+          "index_cache_dir": "cache/sentinel2",
+          "modality": "L1C",
+          "sort_by": "cloud_cover",
+          "use_rtree_index": true
+        },
+        "time_offset": "0d"
+      },
+      "type": "raster"
+    },
+    "sentinel2_mo08": {
+      "alias": "sentinel2",
+      "band_sets": [
+        {
+          "bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B08"
+          ],
+          "dtype": "uint16"
+        },
+        {
+          "bands": [
+            "B05",
+            "B06",
+            "B07",
+            "B8A",
+            "B11",
+            "B12"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -1
+        },
+        {
+          "bands": [
+            "B01",
+            "B09",
+            "B10"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -2
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.gcp_public_data.Sentinel2",
+        "duration": "30d",
+        "init_args": {
+          "harmonize": true,
+          "index_cache_dir": "cache/sentinel2",
+          "modality": "L1C",
+          "sort_by": "cloud_cover",
+          "use_rtree_index": true
+        },
+        "time_offset": "30d"
+      },
+      "type": "raster"
+    },
+    "sentinel2_mo09": {
+      "alias": "sentinel2",
+      "band_sets": [
+        {
+          "bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B08"
+          ],
+          "dtype": "uint16"
+        },
+        {
+          "bands": [
+            "B05",
+            "B06",
+            "B07",
+            "B8A",
+            "B11",
+            "B12"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -1
+        },
+        {
+          "bands": [
+            "B01",
+            "B09",
+            "B10"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -2
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.gcp_public_data.Sentinel2",
+        "duration": "30d",
+        "init_args": {
+          "harmonize": true,
+          "index_cache_dir": "cache/sentinel2",
+          "modality": "L1C",
+          "sort_by": "cloud_cover",
+          "use_rtree_index": true
+        },
+        "time_offset": "60d"
+      },
+      "type": "raster"
+    },
+    "sentinel2_mo10": {
+      "alias": "sentinel2",
+      "band_sets": [
+        {
+          "bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B08"
+          ],
+          "dtype": "uint16"
+        },
+        {
+          "bands": [
+            "B05",
+            "B06",
+            "B07",
+            "B8A",
+            "B11",
+            "B12"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -1
+        },
+        {
+          "bands": [
+            "B01",
+            "B09",
+            "B10"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -2
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.gcp_public_data.Sentinel2",
+        "duration": "30d",
+        "init_args": {
+          "harmonize": true,
+          "index_cache_dir": "cache/sentinel2",
+          "modality": "L1C",
+          "sort_by": "cloud_cover",
+          "use_rtree_index": true
+        },
+        "time_offset": "90d"
+      },
+      "type": "raster"
+    },
+    "sentinel2_mo11": {
+      "alias": "sentinel2",
+      "band_sets": [
+        {
+          "bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B08"
+          ],
+          "dtype": "uint16"
+        },
+        {
+          "bands": [
+            "B05",
+            "B06",
+            "B07",
+            "B8A",
+            "B11",
+            "B12"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -1
+        },
+        {
+          "bands": [
+            "B01",
+            "B09",
+            "B10"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -2
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.gcp_public_data.Sentinel2",
+        "duration": "30d",
+        "init_args": {
+          "harmonize": true,
+          "index_cache_dir": "cache/sentinel2",
+          "modality": "L1C",
+          "sort_by": "cloud_cover",
+          "use_rtree_index": true
+        },
+        "time_offset": "120d"
+      },
+      "type": "raster"
+    },
+    "sentinel2_mo12": {
+      "alias": "sentinel2",
+      "band_sets": [
+        {
+          "bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B08"
+          ],
+          "dtype": "uint16"
+        },
+        {
+          "bands": [
+            "B05",
+            "B06",
+            "B07",
+            "B8A",
+            "B11",
+            "B12"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -1
+        },
+        {
+          "bands": [
+            "B01",
+            "B09",
+            "B10"
+          ],
+          "dtype": "uint16",
+          "zoom_offset": -2
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.gcp_public_data.Sentinel2",
+        "duration": "30d",
+        "init_args": {
+          "harmonize": true,
+          "index_cache_dir": "cache/sentinel2",
+          "modality": "L1C",
+          "sort_by": "cloud_cover",
+          "use_rtree_index": true
+        },
+        "time_offset": "150d"
+      },
+      "type": "raster"
+    }
+  },
+  "tile_store": {
+    "class_path": "rslearn.tile_stores.default.DefaultTileStore",
+    "init_args": {
+      "geotiff_options": {
+        "compress": "zstd",
+        "predictor": 2,
+        "zstd_level": 1
+      },
+      "path_suffix": "file:///tmp/rslearn_helios_tile_store"
+    }
+  }
+}

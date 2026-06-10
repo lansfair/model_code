@@ -1,0 +1,22 @@
+{
+  "layers": {
+    "srtm": {
+      "band_sets": [
+        {
+          "bands": [
+            "srtm"
+          ],
+          "dtype": "int32"
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.hf_srtm.SRTM",
+        "init_args": {
+          "cache_dir": "cache/srtm"
+        }
+      },
+      "resampling_method": "nearest",
+      "type": "raster"
+    }
+  }
+}

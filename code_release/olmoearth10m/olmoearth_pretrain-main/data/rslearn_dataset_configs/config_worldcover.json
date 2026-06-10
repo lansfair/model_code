@@ -1,0 +1,22 @@
+{
+  "layers": {
+    "worldcover": {
+      "band_sets": [
+        {
+          "bands": [
+            "B1"
+          ],
+          "dtype": "uint8"
+        }
+      ],
+      "data_source": {
+        "class_path": "rslearn.data_sources.worldcover.WorldCover",
+        "init_args": {
+          "worldcover_dir": "source_data/worldcover/"
+        }
+      },
+      "resampling_method": "nearest",
+      "type": "raster"
+    }
+  }
+}
