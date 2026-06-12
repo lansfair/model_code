@@ -651,7 +651,7 @@ class Modality:
     RGB = ModalitySpec(
         name="rgb",
         tile_resolution_factor=4,
-        band_sets=[BandSet(["R", "G", "B"], 4),
+        band_sets=[BandSet(["B", "G", "R"], 4),
                    BandSet(["NIR"], 4)                   
         ],
         is_multitemporal=True,
