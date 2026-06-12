@@ -58,8 +58,8 @@ def parse_args() -> argparse.Namespace:
         type=int,
         default=None,
         help=(
-            "Target patch size used only for shape validation. Defaults to 16 "
-            "for small/base/large and 14 for huge."
+            "Target patch size used only with --validate-shape. Defaults to "
+            "16 for small/base/large and 14 for huge."
         ),
     )
     parser.add_argument(
@@ -72,9 +72,13 @@ def parse_args() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
-        "--no-validate-shape",
+        "--validate-shape",
         action="store_true",
-        help="Skip target model construction and export by key filtering only.",
+        help=(
+            "Import local model_vit.py and validate exported tensor shapes "
+            "against the target backbone. Disabled by default so exporting "
+            "does not depend on the Copernicus-FM source tree."
+        ),
     )
     parser.add_argument(
         "--state-key",
@@ -202,11 +206,13 @@ def build_target_state(args: argparse.Namespace) -> dict[str, torch.Tensor]:
     patch_size = args.patch_size
     if patch_size is None:
         patch_size = 14 if args.arch == "huge" else 16
-    model = factory(
-        img_size=args.img_size,
-        patch_size=patch_size,
-        global_pool=args.global_pool,
-    )
+    model_kwargs = {
+        "img_size": args.img_size,
+        "global_pool": args.global_pool,
+    }
+    if args.patch_size is not None:
+        model_kwargs["patch_size"] = patch_size
+    model = factory(**model_kwargs)
     return model.state_dict()
 
 
@@ -267,7 +273,7 @@ def main() -> None:
     missing: list[str] = []
     unexpected: list[str] = []
     shape_mismatch: list[tuple[str, Any, Any]] = []
-    if not args.no_validate_shape:
+    if args.validate_shape:
         target = build_target_state(args)
         exported, missing, unexpected, shape_mismatch = filter_by_target_shape(
             exported,
