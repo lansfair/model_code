@@ -3,8 +3,8 @@
 
 The pretraining script saves a full MAE training checkpoint. That checkpoint
 contains encoder weights, decoder weights, optimizer state, scaler state, and
-distillation-only modules. Downstream Copernicus-FM code expects a compact
-backbone checkpoint whose ``model`` entry can be loaded into ``vit_*_patch16``.
+distillation-only modules. Downstream Copernicus-FM code expects a compact raw
+backbone state_dict that can be loaded into ``vit_*_patch16``.
 
 Example:
     python export_copernicusfm_backbone.py \
@@ -78,10 +78,10 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--state-key",
-        default="model",
+        default="none",
         help=(
-            "Top-level key used in the exported checkpoint. Use 'none' to save "
-            "a raw state_dict instead of {'model': state_dict}."
+            "Top-level key used in the exported checkpoint. Defaults to 'none' "
+            "to save a raw state_dict. Use 'model' to save {'model': state_dict}."
         ),
     )
     parser.add_argument(
